@@ -2,6 +2,7 @@ let varGlobalColor = '#000'
 
 const cuerpo = document.getElementById('cuerpo');
 const cuadroKey = document.getElementById('key');
+const grupoCajas = document.querySelector('.grupo-cajas');
 
 const cambiaColor = (elemento,color)=>{
     elemento.style.backgroundColor = color;
@@ -12,7 +13,7 @@ const agregarCaja = (color)=>{
     nuevoDiv.classList.add('cuadrado');
     nuevoDiv.classList.add('border-back');
     nuevoDiv.style.backgroundColor = color;
-    document.body.appendChild(nuevoDiv);
+    grupoCajas.appendChild(nuevoDiv);
 };
 
 cuerpo.addEventListener('keydown',(eventoTeclado)=>{
